@@ -21,14 +21,26 @@
             font-size: 9pt;
             line-height: 1.3;
             color: #222;
-            background: #ffffff;
+            background-color: #f7f5f0;
+            background-image:
+                repeating-linear-gradient(0deg, transparent, transparent 19px, #ddd 20px),
+                repeating-linear-gradient(90deg, transparent, transparent 19px, #ddd 20px);
+            background-size: 20px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 20px 16px;
         }
 
         .page {
-            max-width: 210mm;
+            width: 210mm;
             margin: 0 auto;
-            padding:6mm 4mm;
-            padding-top: 14mm; 
+            padding: 6mm 4mm;
+            background: #ffffff;
+            border-radius: 10px;
+            border-top: 5px solid #1f3a5f;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         }
 
         .header {
@@ -179,10 +191,15 @@
         @media print {
             body {
                 background: #ffffff;
+                background-image: none;
+                padding: 0;
             }
             .page {
-                padding: 0;
+                border-radius: 0;
+                border-top: none;
+                box-shadow: none;
                 max-width: none;
+                width: 100%;
             }
         }
     </style>
@@ -193,7 +210,6 @@
         <header class="header">
             <div class="header-top">
                 <div class="avatar-box">
-                    <!-- 把下面这行替换成你的照片即可，例如：<img src="avatar.jpg" alt="Yi Li photo"> -->
                     <img src="photo.jpg" alt="Yi Li photo">
                 </div>
                 
@@ -215,15 +231,13 @@
                         Computer Science, Machine Learning, Artificial Intelligence
                     </div>
                 </div>
-
-                
             </div>
         </header>
 
         <div class="main">
             <!-- LEFT COLUMN (MAIN) -->
             <div class="left">
-                <!-- PROFESSIONAL EXPERIENCE -->
+                <!-- INTERNSHIP -->
                 <section class="section">
                     <div class="section-title">Internship</div>
                     <div class="item">
@@ -241,6 +255,15 @@
                 <!-- RESEARCH EXPERIENCE -->
                 <section class="section">
                     <div class="section-title">Research Experience</div>
+
+                    <div class="item">
+                        <div class="item-header">LLM Agent Memory Mechanisms | Ongoing</div>
+                        <ul class="bullet-list">
+                            <li>Investigating memory architectures for LLM-based agents, focusing on how agents store, retrieve and update information across long-horizon tasks.</li>
+                            <li>Exploring episodic, semantic and working memory paradigms in the context of agentic AI systems.</li>
+                            <li>Analysing trade-offs between in-context memory, external memory stores and retrieval-augmented approaches for agent performance.</li>
+                        </ul>
+                    </div>
 
                     <div class="item">
                         <div class="item-header">Exploration of Neural Network Memory Mechanism | 2024</div>
@@ -275,7 +298,7 @@
 
                 <!-- SELECTED PROJECTS -->
                 <section class="section">
-                    <div class="section-title">Univerity Selected Projects</div>
+                    <div class="section-title">University Selected Projects</div>
 
                     <div class="item">
                         <div class="item-header">Movie Review Sentiment Analysis System</div>
@@ -305,7 +328,7 @@
                 <section class="section">
                     <div class="section-title">Profile</div>
                     <p class="profile-text">
-                        MSc Cyber Security (offer-holder) at the University of Bristol and BSc Computer Science graduate (Upper Second-Class Honours) from the University of Sheffield. Experienced in entity alignment, recommendation systems and sentiment analysis through research and industry projects, including an algorithm internship at China Telecom building collaborative filtering and LLM-based recommendation services. Interested in applying machine learning and AI to real-world security and intelligent service problems.
+                        MSc Cyber Security (offer-holder) at the University of Bristol and BSc Computer Science graduate (Upper Second-Class Honours) from the University of Sheffield. Currently researching LLM agent memory mechanisms, exploring how agents store and retrieve information across long-horizon tasks. Experienced in entity alignment, recommendation systems and sentiment analysis through research and industry projects, including an algorithm internship at China Telecom building collaborative filtering and LLM-based recommendation services. Interested in applying machine learning and AI to real-world security and intelligent service problems.
                     </p>
                 </section>
 
@@ -334,7 +357,7 @@
                     <div class="skills-text">
                         <span class="skill-label">Programming:</span> Python, Java, JavaScript, Ruby, HTML/CSS, MySQL.<br>
                         <span class="skill-label">AI / ML:</span> TensorFlow, PyTorch, scikit-learn, PettingZoo.<br>
-                        <span class="skill-label">Focus Areas:</span> Recommendation Systems, Machine Learning, Network Analysis, Sentiment Analysis, Feature Engineering, NLP, Computer Vision, Neural Network Memory.
+                        <span class="skill-label">Focus Areas:</span> LLM Agent Memory, Recommendation Systems, Machine Learning, Network Analysis, Sentiment Analysis, Feature Engineering, NLP, Computer Vision.
                     </div>
                 </section>
 
