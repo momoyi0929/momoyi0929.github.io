@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yi Li - Curriculum Vitae</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 10mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 9pt;
+            line-height: 1.3;
+            color: #222;
+            background: #ffffff;
+        }
+
+        .page {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding:6mm 4mm;
+            padding-top: 14mm; 
+        }
+
+        .header {
+            border-bottom: 1px solid #999;
+            padding-bottom: 4px;
+            margin-bottom: 6px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .header-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .avatar-box {
+            width: 82px;
+            height: 102px;
+            border: 1px dashed #9aa7b8;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 7.2pt;
+            color: #667085;
+            background: #fafbfc;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .avatar-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .header h1 {
+            font-size: 18pt;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .contact-main {
+            font-size: 8pt;
+            line-height: 1.3;
+            margin-bottom: 1px;
+        }
+
+        .contact-main span {
+            margin-right: 8px;
+        }
+
+        .contact-main span::after {
+            content: "|";
+            margin-left: 8px;
+            color: #aaa;
+        }
+
+        .contact-main span:last-child::after {
+            content: "";
+            margin: 0;
+        }
+
+        .contact-inline {
+            font-size: 8pt;
+            color: #444;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 65% 33%;
+            column-gap: 10px;
+        }
+
+        .left,
+        .right {
+            font-size: 8.7pt;
+        }
+
+        .section {
+            margin-bottom: 6px;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 9pt;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #1f3a5f;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 2px;
+            margin-bottom: 3px;
+        }
+
+        .profile-text {
+            text-align: justify;
+        }
+
+        .item {
+            margin-bottom: 4px;
+        }
+
+        .item-header {
+            font-weight: 600;
+            font-size: 8.7pt;
+        }
+
+        .item-subheader {
+            font-size: 8pt;
+            font-style: italic;
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+
+        .bullet-list {
+            margin-top: 1px;
+            margin-left: 12px;
+        }
+
+        .bullet-list li {
+            margin-bottom: 1px;
+            font-size: 8pt;
+        }
+
+        .doi-link {
+            font-size: 7.8pt;
+            margin-top: 1px;
+        }
+
+        .skills-text {
+            font-size: 8pt;
+            line-height: 1.35;
+        }
+
+        .skill-label {
+            font-weight: 600;
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+            }
+            .page {
+                padding: 0;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-top">
+                <div class="header-text">
+                    <h1>YI LI</h1>
+                    <div class="contact-main">
+                        <span>+86 13382327257</span>
+                        <span>+44 7942844323</span>
+                    </div>
+
+                    <div class="contact-main2">
+                        <span>sheffieldliyi@gmail.com</span>
+                    </div>
+
+                    <div class="contact-main3">
+                        <span>Bristol, United Kingdom</span>
+                    </div>
+                    <div class="contact-inline">
+                        Computer Science, Machine Learning, Artificial Intelligence
+                    </div>
+                </div>
+
+                <div class="avatar-box">
+                    <!-- 把下面这行替换成你的照片即可，例如：<img src="avatar.jpg" alt="Yi Li photo"> -->
+                    <span>photo.jpg<br>120 × 150</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main">
+            <!-- LEFT COLUMN (MAIN) -->
+            <div class="left">
+                <!-- PROFESSIONAL EXPERIENCE -->
+                <section class="section">
+                    <div class="section-title">Internship</div>
+                    <div class="item">
+                        <div class="item-header">China Telecom | Nanjing, Jiangsu Province, China</div>
+                        <div class="item-subheader">Recommendation Algorithm Intern | Jun 2024 – Dec 2024</div>
+                        <ul class="bullet-list">
+                            <li>Built collaborative filtering-based recommendation models from user behaviour data for a customer service platform.</li>
+                            <li>Designed LLM-powered recommendation services for contextual understanding of chat records, improving response relevance and satisfaction.</li>
+                            <li>Analysed large-scale interaction logs to identify behavioural patterns and optimise recommendation accuracy.</li>
+                            <li>Worked with cross-functional teams to integrate the recommendation engine into existing service infrastructure.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- RESEARCH EXPERIENCE -->
+                <section class="section">
+                    <div class="section-title">Research Experience</div>
+
+                    <div class="item">
+                        <div class="item-header">Exploration of Neural Network Memory Mechanism | 2024</div>
+                        <ul class="bullet-list">
+                            <li>Studied memory mechanisms in RNNs, focusing on gradients and attractors for long-term memory.</li>
+                            <li>Designed tasks on short-term reproduction, long-term association and attractor simulation.</li>
+                            <li>Proposed an Euler Sine Analysis method to visualise attractor dynamics in seq2seq models.</li>
+                            <li>Analysed attraction basins and loss–gradient patterns to explain long-dependency challenges.</li>
+                        </ul>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-header">NF-Align: Neighborhood Filtering for Entity Alignment in Large-Scale Communication Networks | Sep 2023</div>
+                        <div class="doi-link">DOI: 10.1109/WCSP58612.2023.10405271</div>
+                        <ul class="bullet-list">
+                            <li>Proposed a neighbourhood filtering approach tailored for entity alignment in communication networks.</li>
+                            <li>Designed a hybrid motif-based metric to estimate node importance from communication patterns.</li>
+                            <li>Validated NF-Align on five benchmark datasets as a plugin to existing embedding models.</li>
+                        </ul>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-header">PageRank Algorithm with Multi-Particle Environment Based on PettingZoo | Aug 2023</div>
+                        <div class="doi-link">DOI: https://doi.org/10.54097/zsfnjk16</div>
+                        <ul class="bullet-list">
+                            <li>Built a multi-agent simulation with PettingZoo to test PageRank via virtual network scenarios.</li>
+                            <li>Constructed graph-based agent networks where PageRank rankings matched designed attributes.</li>
+                            <li>Demonstrated the suitability of the environment for PageRank experiments and network analysis.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- SELECTED PROJECTS -->
+                <section class="section">
+                    <div class="section-title">Univerity Selected Projects</div>
+
+                    <div class="item">
+                        <div class="item-header">Movie Review Sentiment Analysis System</div>
+                        <div class="doi-link">GitHub: momoyi0929/Sentiment-Analysis-of-Movie-Reviews.git</div>
+                        <ul class="bullet-list">
+                            <li>Implemented a binary sentiment classification system for movie reviews using a Naive Bayes classifier.</li>
+                            <li>Applied TF–IDF feature extraction to strengthen feature representation and improve model performance.</li>
+                            <li>Optimised the model pipeline, increasing accuracy and macro-averaged F1 score on sentiment tasks.</li>
+                        </ul>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-header">Image Feature Analysis and Stitching System</div>
+                        <div class="doi-link">GitHub: momoyi0929/Salient-Feature-Matching-and-Image-Stitch.git</div>
+                        <ul class="bullet-list">
+                            <li>Compared Harris corner detection, SIFT (Scale-Invariant Feature Transform) and ORB (Oriented FAST and Rotated BRIEF) feature detection methods.</li>
+                            <li>Implemented an image stitching algorithm based on SIFT- and ORB-based feature matching.</li>
+                            <li>Designed and developed a graphical user interface integrating all system functionalities.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN (SIDE) -->
+            <div class="right">
+                <!-- PROFILE -->
+                <section class="section">
+                    <div class="section-title">Profile</div>
+                    <p class="profile-text">
+                        MSc Cyber Security (offer-holder) at the University of Bristol and BSc Computer Science graduate (Upper Second-Class Honours) from the University of Sheffield. Experienced in entity alignment, recommendation systems and sentiment analysis through research and industry projects, including an algorithm internship at China Telecom building collaborative filtering and LLM-based recommendation services. Interested in applying machine learning and AI to real-world security and intelligent service problems.
+                    </p>
+                </section>
+
+                <!-- EDUCATION -->
+                <section class="section">
+                    <div class="section-title">Education</div>
+
+                    <div class="item">
+                        <div class="item-header">University of Bristol | Bristol, United Kingdom</div>
+                        <div class="item-subheader">MSc Cyber Security | Sep 2025 – Aug 2026 (Expected)</div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-header">University of Sheffield | Sheffield, United Kingdom | Upper Second-Class Honours</div>
+                        <div class="item-subheader">BSc Computer Science | Graduated 2024</div>
+                        <ul class="bullet-list">
+                            <li>Specialisation: Artificial Intelligence, Machine Learning</li>
+                            <li>Core modules: Deep Learning, Computer Vision, Natural Language Processing.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- TECHNICAL SKILLS -->
+                <section class="section">
+                    <div class="section-title">Technical Skills</div>
+                    <div class="skills-text">
+                        <span class="skill-label">Programming:</span> Python, Java, JavaScript, Ruby, HTML/CSS, MySQL.<br>
+                        <span class="skill-label">AI / ML:</span> TensorFlow, PyTorch, scikit-learn, PettingZoo.<br>
+                        <span class="skill-label">Focus Areas:</span> Recommendation Systems, Machine Learning, Network Analysis, Sentiment Analysis, Feature Engineering, NLP, Computer Vision, Neural Network Memory.
+                    </div>
+                </section>
+
+                <!-- CERTIFICATIONS -->
+                <section class="section">
+                    <div class="section-title">Certifications</div>
+                    <div class="skills-text">
+                        <span class="skill-label">PADI Junior Open Water Diver</span> — Level 2 Diver.
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
