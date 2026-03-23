@@ -173,6 +173,7 @@
         .doi-link {
             font-size: 8.5pt;
             margin-top: 1px;
+            color: #555;
         }
 
         .skills-text {
@@ -187,6 +188,49 @@
 
         .skill-label {
             font-weight: 600;
+        }
+
+        /* Publication list styles */
+        .pub-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .pub-list li {
+            font-size: 8.8pt;
+            line-height: 1.6;
+            margin-bottom: 7px;
+            display: flex;
+            gap: 6px;
+        }
+
+        .pub-tag {
+            font-weight: 700;
+            color: #1f3a5f;
+            white-space: nowrap;
+            min-width: 28px;
+        }
+
+        .pub-body {
+            flex: 1;
+        }
+
+        .pub-body em {
+            font-style: italic;
+        }
+
+        .under-review {
+            display: inline-block;
+            font-size: 7.5pt;
+            color: #b45309;
+            background: #fef3c7;
+            border: 1px solid #fcd34d;
+            border-radius: 3px;
+            padding: 0px 4px;
+            margin-left: 4px;
+            vertical-align: middle;
+            font-style: normal;
         }
 
         @media print {
@@ -220,11 +264,9 @@
                         <span>+86 13382327257</span>
                         <span>+44 7942844323</span>
                     </div>
-
                     <div class="contact-main2">
-                        <span>sheffieldliyi@gmail.com</span>
+                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c3b0aba6a5a5aaa6afa7afaabaaa83a4aea2aaafeda0acae">[email&#160;protected]</a></span>
                     </div>
-
                     <div class="contact-main3">
                         <span>Bristol, United Kingdom</span>
                     </div>
@@ -236,8 +278,9 @@
         </header>
 
         <div class="main">
-            <!-- LEFT COLUMN (MAIN) -->
+            <!-- LEFT COLUMN -->
             <div class="left">
+
                 <!-- INTERNSHIP -->
                 <section class="section">
                     <div class="section-title">Internship</div>
@@ -253,18 +296,47 @@
                     </div>
                 </section>
 
-                <!-- RESEARCH EXPERIENCE -->
+                <!-- RESEARCH PUBLICATIONS -->
+                <section class="section">
+                    <div class="section-title">Research Publications</div>
+                    <ul class="pub-list">
+                        <li>
+                            <span class="pub-tag">[P1]</span>
+                            <span class="pub-body">
+                                <strong>Yi Li</strong>, et al. "A Survey of Trustworthy LLMs for Cybersecurity: An Auditable Closed-Loop Framework,"
+                                <em>under review</em>.<span class="under-review">Under Review</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="pub-tag">[P2]</span>
+                            <span class="pub-body">
+                                <strong>Yi Li</strong>, et al. "NF-Align: Neighborhood Filtering for Entity Alignment in Large-Scale Communication Networks,"
+                                <em>2023 IEEE/CIC International Conference on Communications in China (WCSP)</em>, 2023.
+                                DOI: 10.1109/WCSP58612.2023.10405271
+                            </span>
+                        </li>
+                        <li>
+                            <span class="pub-tag">[P3]</span>
+                            <span class="pub-body">
+                                <strong>Yi Li</strong>, et al. "PageRank Algorithm with Multi-Particle Environment Based on PettingZoo,"
+                                <em>Proceedings of the 2023 International Conference</em>, 2023.
+                                DOI: https://doi.org/10.54097/zsfnjk16
+                            </span>
+                        </li>
+                        <li>
+                            <span class="pub-tag">[P4]</span>
+                            <span class="pub-body">
+                                <strong>Yi Li</strong>, Mingxin Liu, Peiyu Luan, and Junchi Zhou. "Game Theory Methods for Pursuit-Evasion Problems,"
+                                <em>Journal of Physics: Conference Series</em>, vol. 2402, 012024, 2022.
+                                DOI: 10.1088/1742-6596/2402/1/012024
+                            </span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- RESEARCH EXPERIENCE (merged with projects) -->
                 <section class="section">
                     <div class="section-title">Research Experience</div>
-
-                    <div class="item">
-                        <div class="item-header">Security of LLM Agent Long-Term Memory | Ongoing</div>
-                        <ul class="bullet-list">
-                            <li>Researching attack and defence mechanisms targeting long-term memory in LLM-based agents, focusing on vulnerabilities in persistent memory stores.</li>
-                            <li>Investigating information hiding strategies to protect sensitive data embedded within agent memory from extraction and inference attacks.</li>
-                            <li>Exploring defensive techniques to prevent adversarial manipulation of stored memory while preserving agent utility across long-horizon tasks.</li>
-                        </ul>
-                    </div>
 
                     <div class="item">
                         <div class="item-header">Exploration of Neural Network Memory Mechanism | 2024</div>
@@ -275,31 +347,6 @@
                             <li>Analysed attraction basins and loss–gradient patterns to explain long-dependency challenges.</li>
                         </ul>
                     </div>
-
-                    <div class="item">
-                        <div class="item-header">NF-Align: Neighborhood Filtering for Entity Alignment in Large-Scale Communication Networks | Sep 2023</div>
-                        <div class="doi-link">DOI: 10.1109/WCSP58612.2023.10405271</div>
-                        <ul class="bullet-list">
-                            <li>Proposed a neighbourhood filtering approach tailored for entity alignment in communication networks.</li>
-                            <li>Designed a hybrid motif-based metric to estimate node importance from communication patterns.</li>
-                            <li>Validated NF-Align on five benchmark datasets as a plugin to existing embedding models.</li>
-                        </ul>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-header">PageRank Algorithm with Multi-Particle Environment Based on PettingZoo | Aug 2023</div>
-                        <div class="doi-link">DOI: https://doi.org/10.54097/zsfnjk16</div>
-                        <ul class="bullet-list">
-                            <li>Built a multi-agent simulation with PettingZoo to test PageRank via virtual network scenarios.</li>
-                            <li>Constructed graph-based agent networks where PageRank rankings matched designed attributes.</li>
-                            <li>Demonstrated the suitability of the environment for PageRank experiments and network analysis.</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- SELECTED PROJECTS -->
-                <section class="section">
-                    <div class="section-title">University Selected Projects</div>
 
                     <div class="item">
                         <div class="item-header">Movie Review Sentiment Analysis System</div>
@@ -323,7 +370,7 @@
                 </section>
             </div>
 
-            <!-- RIGHT COLUMN (SIDE) -->
+            <!-- RIGHT COLUMN -->
             <div class="right">
                 <!-- PROFILE -->
                 <section class="section">
@@ -366,11 +413,4 @@
                 <section class="section">
                     <div class="section-title">Certifications</div>
                     <div class="skills-text">
-                        <span class="skill-label">PADI Junior Open Water Diver</span> — Level 2 Diver.
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+                        <span class="skill-label">PADI Junior Open Water Diver</span> — Leve
