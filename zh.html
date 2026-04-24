@@ -5,23 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>李乙</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
             font-size: 16px;
             line-height: 1.75;
             color: #222;
             background: #ffffff;
         }
 
-        a { color: #1f4e79; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        a {
+            color: #1f4e79;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
 
         .container {
             max-width: 980px;
             margin: 0 auto;
             padding: 42px 28px 60px;
+        }
+
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 18px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .lang-switch .active {
+            color: #222;
+            font-weight: 650;
         }
 
         .header {
@@ -32,7 +54,15 @@
             margin-bottom: 36px;
         }
 
-        .header-text { flex: 1; }
+        .header-text {
+            flex: 1;
+        }
+
+        .school-logo {
+            width: 185px;
+            margin-bottom: 18px;
+            display: block;
+        }
 
         h1 {
             font-size: 38px;
@@ -71,7 +101,9 @@
             font-weight: 500;
         }
 
-        .location-link { color: #333; }
+        .location-link {
+            color: #333;
+        }
 
         .icon {
             width: 22px;
@@ -88,7 +120,9 @@
             border: 1px solid #ddd;
         }
 
-        section { margin-bottom: 34px; }
+        section {
+            margin-bottom: 34px;
+        }
 
         h2 {
             font-size: 24px;
@@ -98,9 +132,13 @@
             margin-bottom: 16px;
         }
 
-        p { margin-bottom: 12px; }
+        p {
+            margin-bottom: 12px;
+        }
 
-        .keywords { margin-top: 12px; }
+        .keywords {
+            margin-top: 12px;
+        }
 
         .tag {
             display: inline-block;
@@ -144,7 +182,9 @@
             margin-left: 22px;
         }
 
-        li { margin-bottom: 5px; }
+        li {
+            margin-bottom: 5px;
+        }
 
         .pub-authors {
             color: #444;
@@ -177,10 +217,54 @@
         }
 
         @media (max-width: 720px) {
-            .header { flex-direction: column-reverse; }
-            .avatar { width: 150px; height: 150px; }
-            h1 { font-size: 32px; }
-            .skills-grid { grid-template-columns: 1fr; }
+            .header {
+                flex-direction: column-reverse;
+            }
+
+            .avatar {
+                width: 150px;
+                height: 150px;
+            }
+
+            .school-logo {
+                width: 160px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                font-size: 12px;
+            }
+
+            .container {
+                max-width: none;
+                padding: 20px;
+            }
+
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+
+            .school-logo {
+                width: 140px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
@@ -188,8 +272,14 @@
 <body>
     <div class="container">
 
+        <div class="lang-switch">
+            <a href="index.html">Eng</a> / <span class="active">中文</span>
+        </div>
+
         <header class="header">
             <div class="header-text">
+                <img class="school-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/University_of_Bristol_logo.svg/512px-University_of_Bristol_logo.svg.png" alt="University of Bristol logo">
+
                 <h1>李乙</h1>
                 <div class="subtitle">布里斯托大学网络安全硕士研究生</div>
                 <div class="affiliation">计算机科学系</div>
@@ -214,8 +304,6 @@
                         <img class="icon" src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location">
                         Bristol
                     </span>
-
-                    <a href="index.html">English</a>
                 </div>
             </div>
 
@@ -244,10 +332,22 @@
 
         <section>
             <h2>动态</h2>
-            <div class="news-item"><span class="date">2025</span> 入读布里斯托大学网络安全硕士项目。</div>
-            <div class="news-item"><span class="date">2024</span> 完成中国电信推荐算法实习。</div>
-            <div class="news-item"><span class="date">2024</span> 开始研究 LLM Agent 长期记忆安全与防御机制。</div>
-            <div class="news-item"><span class="date">2023</span> 发表大规模通信网络实体对齐相关研究。</div>
+            <div class="news-item">
+                <span class="date">2025</span>
+                入读布里斯托大学网络安全硕士项目。
+            </div>
+            <div class="news-item">
+                <span class="date">2024</span>
+                完成中国电信推荐算法实习。
+            </div>
+            <div class="news-item">
+                <span class="date">2024</span>
+                开始研究 LLM Agent 长期记忆安全与防御机制。
+            </div>
+            <div class="news-item">
+                <span class="date">2023</span>
+                发表大规模通信网络实体对齐相关研究。
+            </div>
         </section>
 
         <section>
@@ -273,7 +373,7 @@
 
             <div class="exp-item">
                 <div class="exp-title">LLM Agent 长期记忆安全</div>
-                <div class="meta">进行中</div>
+                <div class="meta">进行中研究项目</div>
                 <ul>
                     <li>研究 LLM 智能体长期记忆系统中的安全风险，包括记忆投毒、检索操控与跨轮传播。</li>
                     <li>提出基于记忆生命周期的防御框架，覆盖记忆写入、检索、验证、推理与反馈回写环节。</li>
