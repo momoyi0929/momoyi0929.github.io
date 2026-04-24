@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李乙</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.75;
+            color: #222;
+            background: #ffffff;
+        }
+
+        a { color: #1f4e79; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 42px 28px 60px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 36px;
+            margin-bottom: 36px;
+        }
+
+        .header-text { flex: 1; }
+
+        h1 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 4px;
+            color: #333;
+        }
+
+        .affiliation {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 14px;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            margin-top: 18px;
+            font-size: 15px;
+            flex-wrap: wrap;
+        }
+
+        .links a,
+        .location-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #1f4e79;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .location-link { color: #333; }
+
+        .icon {
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .avatar {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+
+        section { margin-bottom: 34px; }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 650;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 6px;
+            margin-bottom: 16px;
+        }
+
+        p { margin-bottom: 12px; }
+
+        .keywords { margin-top: 12px; }
+
+        .tag {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #1f3a5f;
+            padding: 3px 9px;
+            border-radius: 999px;
+            font-size: 14px;
+            margin: 3px 5px 3px 0;
+        }
+
+        .news-item,
+        .edu-item,
+        .exp-item,
+        .pub-item {
+            margin-bottom: 18px;
+        }
+
+        .date {
+            font-weight: 600;
+            color: #555;
+            min-width: 110px;
+            display: inline-block;
+        }
+
+        .edu-title,
+        .exp-title,
+        .pub-title {
+            font-weight: 650;
+            font-size: 17px;
+        }
+
+        .meta {
+            color: #555;
+            font-style: italic;
+            margin-top: 2px;
+        }
+
+        ul {
+            margin-top: 7px;
+            margin-left: 22px;
+        }
+
+        li { margin-bottom: 5px; }
+
+        .pub-authors {
+            color: #444;
+            margin-top: 3px;
+        }
+
+        .pub-venue {
+            color: #555;
+            margin-top: 2px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            row-gap: 8px;
+            column-gap: 16px;
+        }
+
+        .skill-label {
+            font-weight: 650;
+            color: #333;
+        }
+
+        footer {
+            margin-top: 42px;
+            color: #777;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+            padding-top: 14px;
+        }
+
+        @media (max-width: 720px) {
+            .header { flex-direction: column-reverse; }
+            .avatar { width: 150px; height: 150px; }
+            h1 { font-size: 32px; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <div class="header-text">
+                <h1>李乙</h1>
+                <div class="subtitle">布里斯托大学网络安全硕士研究生</div>
+                <div class="affiliation">计算机科学系</div>
+
+                <div class="links">
+                    <a href="mailto:sheffieldliyi@gmail.com">
+                        <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email">
+                        邮箱
+                    </a>
+
+                    <a href="https://github.com/momoyi0929" target="_blank">
+                        <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                        GitHub
+                    </a>
+
+                    <a href="https://scholar.google.com/citations?user=71bfvQcAAAAJ&hl=zh-CN" target="_blank">
+                        <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar" style="filter: invert(45%) sepia(98%) saturate(1744%) hue-rotate(203deg) brightness(96%) contrast(95%);">
+                        Google Scholar
+                    </a>
+
+                    <span class="location-link">
+                        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location">
+                        Bristol
+                    </span>
+
+                    <a href="index.html">English</a>
+                </div>
+            </div>
+
+            <img class="avatar" src="photo.jpg" alt="Yi Li photo">
+        </header>
+
+        <section>
+            <h2>个人简介</h2>
+            <p>
+                我目前是布里斯托大学网络安全专业硕士研究生，本科毕业于谢菲尔德大学计算机科学专业。
+                我的研究方向聚焦于大语言模型智能体长期记忆系统中的攻击与防御机制，尤其关注记忆投毒、检索操控、跨轮传播、信息隐藏以及敏感信息保护等问题。
+            </p>
+            <p>
+                我具有实体对齐、推荐系统、情感分析、计算机视觉以及大语言模型智能服务方面的研究与工程经验。
+                在中国电信实习期间，我参与了面向客服场景的协同过滤推荐模型与基于大语言模型的推荐服务设计。
+            </p>
+
+            <div class="keywords">
+                <span class="tag">LLM Agent Security</span>
+                <span class="tag">Long-Term Memory</span>
+                <span class="tag">Memory Poisoning</span>
+                <span class="tag">Adversarial Defence</span>
+                <span class="tag">Knowledge Graph</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>动态</h2>
+            <div class="news-item"><span class="date">2025</span> 入读布里斯托大学网络安全硕士项目。</div>
+            <div class="news-item"><span class="date">2024</span> 完成中国电信推荐算法实习。</div>
+            <div class="news-item"><span class="date">2024</span> 开始研究 LLM Agent 长期记忆安全与防御机制。</div>
+            <div class="news-item"><span class="date">2023</span> 发表大规模通信网络实体对齐相关研究。</div>
+        </section>
+
+        <section>
+            <h2>教育经历</h2>
+
+            <div class="edu-item">
+                <div class="edu-title">网络安全硕士</div>
+                <div class="meta">布里斯托大学，英国 | 2025.09 – 2026.08</div>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-title">计算机科学本科</div>
+                <div class="meta">谢菲尔德大学，英国 | Upper Second-Class Honours | 2024 毕业</div>
+                <ul>
+                    <li>方向：人工智能与机器学习。</li>
+                    <li>核心课程：深度学习、计算机视觉、自然语言处理。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>研究经历</h2>
+
+            <div class="exp-item">
+                <div class="exp-title">LLM Agent 长期记忆安全</div>
+                <div class="meta">进行中</div>
+                <ul>
+                    <li>研究 LLM 智能体长期记忆系统中的安全风险，包括记忆投毒、检索操控与跨轮传播。</li>
+                    <li>提出基于记忆生命周期的防御框架，覆盖记忆写入、检索、验证、推理与反馈回写环节。</li>
+                    <li>设计基于 MEXTRA、AgentPoison 等智能体基准的实验，用于评估恶意记忆对长期行为的影响。</li>
+                    <li>开发模块化防御组件，包括记忆验证、一致性检查与安全检索机制。</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-title">神经网络记忆机制探索</div>
+                <div class="meta">2024</div>
+                <ul>
+                    <li>研究 RNN 中的记忆机制，重点分析梯度变化与吸引子对长期记忆的影响。</li>
+                    <li>设计短期复现、长期关联与吸引子模拟任务。</li>
+                    <li>提出 Euler Sine Analysis 方法，用于可视化 seq2seq 模型中的吸引子动态。</li>
+                    <li>分析吸引盆与 loss-gradient 模式，以解释长依赖建模中的困难。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>代表论文</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">A Survey of Trustworthy LLMs for Cybersecurity: An Auditable Closed-Loop Framework</div>
+                <div class="pub-authors"><strong>Yi Li</strong>, et al.</div>
+                <div class="pub-venue">Manuscript in preparation, targeting ACM Computing Surveys.</div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">NF-Align: Neighborhood Filtering for Entity Alignment in Large-Scale Communication Networks</div>
+                <div class="pub-authors"><strong>Yi Li</strong>, et al.</div>
+                <div class="pub-venue">2023 IEEE/CIC International Conference on Communications in China (WCSP), 2023. DOI: 10.1109/WCSP58612.2023.10405271</div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">PageRank Algorithm with Multi-Particle Environment Based on PettingZoo</div>
+                <div class="pub-authors"><strong>Yi Li</strong>, et al.</div>
+                <div class="pub-venue">Proceedings of the 2023 International Conference, 2023. DOI: https://doi.org/10.54097/zsfnjk16</div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Game Theory Methods for Pursuit-Evasion Problems</div>
+                <div class="pub-authors"><strong>Yi Li</strong>, Mingxin Liu, Peiyu Luan, and Junchi Zhou</div>
+                <div class="pub-venue">Journal of Physics: Conference Series, vol. 2402, 012024, 2022. DOI: 10.1088/1742-6596/2402/1/012024</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>实习经历</h2>
+
+            <div class="exp-item">
+                <div class="exp-title">推荐算法实习生</div>
+                <div class="meta">中国电信，江苏南京 | 2024.06 – 2024.12</div>
+                <ul>
+                    <li>基于用户行为数据构建客服平台中的协同过滤推荐模型。</li>
+                    <li>设计基于大语言模型的推荐服务，用于理解聊天记录上下文并提升推荐相关性。</li>
+                    <li>分析大规模交互日志，挖掘用户行为模式并优化推荐准确率。</li>
+                    <li>与跨职能团队协作，将推荐引擎集成至已有服务系统。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>项目经历</h2>
+
+            <div class="exp-item">
+                <div class="exp-title">电影评论情感分析系统</div>
+                <div class="meta">GitHub: momoyi0929/Sentiment-Analysis-of-Movie-Reviews.git</div>
+                <ul>
+                    <li>使用朴素贝叶斯分类器实现电影评论二分类情感分析系统。</li>
+                    <li>采用 TF-IDF 特征提取方法增强文本特征表示。</li>
+                    <li>优化模型流程，提高情感分类任务中的准确率与宏平均 F1 分数。</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-title">图像特征分析与拼接系统</div>
+                <div class="meta">GitHub: momoyi0929/Salient-Feature-Matching-and-Image-Stitch.git</div>
+                <ul>
+                    <li>比较 Harris 角点检测、SIFT 与 ORB 特征检测方法。</li>
+                    <li>实现基于 SIFT 与 ORB 特征匹配的图像拼接算法。</li>
+                    <li>设计并开发集成系统功能的图形用户界面。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>技术能力</h2>
+            <div class="skills-grid">
+                <div class="skill-label">编程语言</div>
+                <div>Python, Java, JavaScript, Ruby, HTML/CSS, MySQL</div>
+
+                <div class="skill-label">AI / ML</div>
+                <div>TensorFlow, PyTorch, scikit-learn, PettingZoo</div>
+
+                <div class="skill-label">研究方向</div>
+                <div>LLM Agent Memory Security, Information Hiding, Adversarial Defence, Recommendation Systems, Machine Learning, Network Analysis, NLP, Computer Vision</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>证书</h2>
+            <p>PADI Junior Open Water Diver — Level 1</p>
+        </section>
+
+        <footer>
+            © 2026 李乙. Last updated: April 2026.
+        </footer>
+
+    </div>
+</body>
+</html>
