@@ -208,6 +208,42 @@
             color: #333;
         }
 
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .edu-school {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 6px;
+            color: #444;
+        }
+        
+        .edu-logo {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+        
+        .edu-date {
+            color: #777;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        .edu-item {
+            padding: 18px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .edu-item:last-child {
+            border-bottom: none;
+        }
+        
         footer {
             margin-top: 42px;
             color: #777;
@@ -352,19 +388,36 @@
 
         <section>
             <h2>教育经历</h2>
-
+        
             <div class="edu-item">
-                <div class="edu-title">网络安全硕士</div>
-                <div class="meta">布里斯托大学，英国 | 2025.09 – 2026.08</div>
+                <div class="edu-header">
+                    <div>
+                        <div class="edu-title">网络安全硕士</div>
+                        <div class="edu-school">
+                            <img class="edu-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/University_of_Bristol_logo.svg/512px-University_of_Bristol_logo.svg.png" alt="University of Bristol logo">
+                            <span>布里斯托大学</span>
+                        </div>
+                    </div>
+                    <div class="edu-date">2025.09 – 2026.08</div>
+                </div>
             </div>
-
+        
             <div class="edu-item">
-                <div class="edu-title">计算机科学本科</div>
-                <div class="meta">谢菲尔德大学，英国 | Upper Second-Class Honours | 2024 毕业</div>
-                <ul>
-                    <li>方向：人工智能与机器学习。</li>
-                    <li>核心课程：深度学习、计算机视觉、自然语言处理。</li>
-                </ul>
+                <div class="edu-header">
+                    <div>
+                        <div class="edu-title">计算机科学本科</div>
+                        <div class="edu-school">
+                            <img class="edu-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/3/33/University_of_Sheffield_logo.svg/512px-University_of_Sheffield_logo.svg.png" alt="University of Sheffield logo">
+                            <span>谢菲尔德大学</span>
+                        </div>
+                        <ul>
+                            <li>Upper Second-Class Honours。</li>
+                            <li>方向：人工智能与机器学习。</li>
+                            <li>核心课程：深度学习、计算机视觉、自然语言处理。</li>
+                        </ul>
+                    </div>
+                    <div class="edu-date">2024 毕业</div>
+                </div>
             </div>
         </section>
 
