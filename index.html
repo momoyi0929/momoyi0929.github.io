@@ -1,469 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yi Li</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yi Li</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.65;
-            color: #222;
-            background: #ffffff;
-        }
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
 
-        a {
-            color: #1f4e79;
-            text-decoration: none;
-        }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+    font-size:16px;
+    line-height:1.65;
+    color:#222;
+    background:#fff;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+.container {
+    max-width:980px;
+    margin:0 auto;
+    padding:40px 24px 60px;
+}
 
-        .container {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 42px 28px 60px;
-        }
+/* ===== Language Switch ===== */
+.lang-switch {
+    text-align:right;
+    margin-bottom:16px;
+    font-size:15px;
+}
 
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 36px;
-            margin-bottom: 36px;
-        }
+.lang-switch a {
+    color:#1f4e79;
+    text-decoration:none;
+}
 
-        .header-text {
-            flex: 1;
-        }
+.lang-switch .active {
+    font-weight:600;
+    color:#222;
+}
 
-        h1 {
-            font-size: 38px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
+/* ===== Header ===== */
+.header {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:36px;
+    margin-bottom:30px;
+}
 
-        .subtitle {
-            font-size: 18px;
-            margin-bottom: 4px;
-            color: #333;
-        }
+.header-text { flex:1; }
 
-        .affiliation {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 14px;
-        }
+h1 {
+    font-size:36px;
+    margin-bottom:6px;
+}
 
-        .links {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-            margin-top: 18px;
-            font-size: 15px;
-            flex-wrap: wrap;
-        }
+.subtitle {
+    font-size:18px;
+    margin-bottom:4px;
+}
 
-        .links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #1f4e79;
-            text-decoration: none;
-            font-weight: 500;
-        }
+.affiliation {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#555;
+    margin-bottom:14px;
+}
 
-        .links a:hover {
-            text-decoration: underline;
-        }
+/* 校徽 */
+.logo {
+    width:26px;
+    height:26px;
+}
 
-        .icon {
-            width: 22px;
-            height: 22px;
-            display: inline-block;
-            vertical-align: middle;
-        }
+/* ===== Links ===== */
+.links {
+    display:flex;
+    gap:26px;
+    flex-wrap:wrap;
+    margin-top:10px;
+}
 
-        .avatar {
-            width: 190px;
-            height: 190px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 1px solid #ddd;
-        }
+.links a {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:15px;
+    color:#1f4e79;
+}
 
-        section {
-            margin-bottom: 34px;
-        }
+.icon {
+    width:20px;
+    height:20px;
+}
 
-        h2 {
-            font-size: 24px;
-            font-weight: 650;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 6px;
-            margin-bottom: 16px;
-        }
+.location-link {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#333;
+}
 
-        p {
-            margin-bottom: 12px;
-        }
+/* ===== Avatar ===== */
+.avatar {
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    object-fit:cover;
+    border:1px solid #ddd;
+}
 
-        .keywords {
-            margin-top: 12px;
-        }
+/* ===== Sections ===== */
+section { margin-bottom:30px; }
 
-        .tag {
-            display: inline-block;
-            background: #f1f5f9;
-            color: #1f3a5f;
-            padding: 3px 9px;
-            border-radius: 999px;
-            font-size: 14px;
-            margin: 3px 5px 3px 0;
-        }
+h2 {
+    font-size:22px;
+    border-bottom:1px solid #ddd;
+    margin-bottom:12px;
+    padding-bottom:4px;
+}
 
-        .news-item,
-        .edu-item,
-        .exp-item,
-        .pub-item {
-            margin-bottom: 18px;
-        }
+p { margin-bottom:10px; }
 
-        .date {
-            font-weight: 600;
-            color: #555;
-            min-width: 110px;
-            display: inline-block;
-        }
+.tag {
+    display:inline-block;
+    background:#eef2f7;
+    padding:3px 10px;
+    border-radius:999px;
+    margin:3px;
+    font-size:14px;
+}
 
-        .edu-title,
-        .exp-title,
-        .pub-title {
-            font-weight: 650;
-            font-size: 17px;
-        }
+.news-item { margin-bottom:8px; }
 
-        .meta {
-            color: #555;
-            font-style: italic;
-            margin-top: 2px;
-        }
+.date {
+    font-weight:600;
+    width:80px;
+    display:inline-block;
+}
 
-        ul {
-            margin-top: 7px;
-            margin-left: 22px;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-
-        .pub-authors {
-            color: #444;
-            margin-top: 3px;
-        }
-
-        .pub-venue {
-            color: #555;
-            margin-top: 2px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 160px 1fr;
-            row-gap: 8px;
-            column-gap: 16px;
-        }
-
-        .skill-label {
-            font-weight: 650;
-            color: #333;
-        }
-        
-        .location-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #333;
-            font-weight: 500;
-        }
-
-        footer {
-            margin-top: 42px;
-            color: #777;
-            font-size: 14px;
-            border-top: 1px solid #eee;
-            padding-top: 14px;
-        }
-
-        @media (max-width: 720px) {
-            .header {
-                flex-direction: column-reverse;
-            }
-
-            .avatar {
-                width: 150px;
-                height: 150px;
-            }
-
-            h1 {
-                font-size: 32px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media print {
-            body {
-                font-size: 12px;
-            }
-
-            .container {
-                max-width: none;
-                padding: 20px;
-            }
-
-            .avatar {
-                width: 120px;
-                height: 120px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            h2 {
-                font-size: 18px;
-            }
-        }
-    </style>
+/* ===== Responsive ===== */
+@media (max-width:720px) {
+    .header { flex-direction:column-reverse; }
+    .avatar { width:130px; height:130px; }
+}
+</style>
 </head>
 
 <body>
-    <div class="container">
 
-        <header class="header">
-            <div class="header-text">
-                <h1>Yi Li</h1>
-                <div class="subtitle">MSc Cyber Security Student @ University of Bristol</div>
-                <div class="affiliation">Department of Computer Science</div>
+<div class="container">
 
-               <div class="links">
-                    <a href="mailto:sheffieldliyi@gmail.com">
-                        <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email">
-                        Email
-                    </a>
-                
-                    <a href="https://github.com/momoyi0929" target="_blank">
-                        <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-                        GitHub
-                    </a>
-                
-                    <a href="https://scholar.google.com/citations?user=71bfvQcAAAAJ&hl=zh-CN" target="_blank">
-                        <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar" style="filter: invert(45%) sepia(98%) saturate(1744%) hue-rotate(203deg) brightness(96%) contrast(95%);">
-                        Google Scholar
-                    </a>
-                
-                    <span class="location-link">
-                        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location">
-                        Bristol
-                    </span>
-
-                   <a href="zh.html">中文</a>
-                   
-                </div>
-            </div>
-
-            <img class="avatar" src="photo.jpg" alt="Yi Li photo">
-        </header>
-
-        <section>
-            <h2>About Me</h2>
-            <p>
-                I am an MSc Cyber Security student at the University of Bristol and a BSc Computer Science graduate from the University of Sheffield.
-                My current research focuses on attack and defence mechanisms for long-term memory systems in LLM-based agents, especially memory poisoning,
-                retrieval manipulation, cross-turn propagation, information hiding, and sensitive data protection.
-            </p>
-            <p>
-                I have research and engineering experience in entity alignment, recommendation systems, sentiment analysis, computer vision, and LLM-based
-                intelligent services. During my internship at China Telecom, I worked on collaborative filtering and LLM-powered recommendation services for
-                customer service scenarios.
-            </p>
-
-            <div class="keywords">
-                <span class="tag">LLM Agent Security</span>
-                <span class="tag">Long-Term Memory</span>
-                <span class="tag">Memory Poisoning</span>
-                <span class="tag">Adversarial Defence</span>
-                <span class="tag">Knowledge Graph</span>
-            </div>
-        </section>
-
-        <section>
-            <h2>News</h2>
-            <div class="news-item">
-                <span class="date">2025</span>
-                Started MSc Cyber Security at the University of Bristol.
-            </div>
-            <div class="news-item">
-                <span class="date">2024</span>
-                Completed recommendation algorithm internship at China Telecom.
-            </div>
-            <div class="news-item">
-                <span class="date">2024</span>
-                Began research on LLM agent long-term memory security and defence mechanisms.
-            </div>
-            <div class="news-item">
-                <span class="date">2023</span>
-                Published work on entity alignment in large-scale communication networks.
-            </div>
-        </section>
-
-        <section>
-            <h2>Education</h2>
-
-            <div class="edu-item">
-                <div class="edu-title">MSc Cyber Security</div>
-                <div class="meta">University of Bristol, United Kingdom | Sep 2025 – Aug 2026</div>
-            </div>
-
-            <div class="edu-item">
-                <div class="edu-title">BSc Computer Science</div>
-                <div class="meta">University of Sheffield, United Kingdom | Upper Second-Class Honours | Graduated 2024</div>
-                <ul>
-                    <li>Specialisation: Artificial Intelligence and Machine Learning.</li>
-                    <li>Core modules: Deep Learning, Computer Vision, Natural Language Processing.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Research Experience</h2>
-
-            <div class="exp-item">
-                <div class="exp-title">LLM Agent Long-Term Memory Security</div>
-                <div class="meta">Ongoing Research Project</div>
-                <ul>
-                    <li>Investigating security risks in long-term memory systems of LLM-based agents, including memory poisoning, retrieval manipulation, and cross-turn propagation.</li>
-                    <li>Proposing a lifecycle-based defence framework covering memory writing, retrieval, validation, reasoning, and feedback loops.</li>
-                    <li>Designing experiments on agent benchmarks such as MEXTRA and AgentPoison to evaluate malicious memory influence on long-horizon behaviour.</li>
-                    <li>Developing modular defence components for memory validation, consistency checking, and safer memory retrieval.</li>
-                </ul>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-title">Exploration of Neural Network Memory Mechanism</div>
-                <div class="meta">2024</div>
-                <ul>
-                    <li>Studied memory mechanisms in RNNs, focusing on gradients and attractors for long-term memory.</li>
-                    <li>Designed tasks on short-term reproduction, long-term association, and attractor simulation.</li>
-                    <li>Proposed an Euler Sine Analysis method to visualise attractor dynamics in seq2seq models.</li>
-                    <li>Analysed attraction basins and loss-gradient patterns to explain long-dependency challenges.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Selected Publications</h2>
-
-            <div class="pub-item">
-                <div class="pub-title">A Survey of Trustworthy LLMs for Cybersecurity: An Auditable Closed-Loop Framework</div>
-                <div class="pub-authors"><strong>Yi Li</strong>, et al.</div>
-                <div class="pub-venue">Manuscript in preparation, targeting ACM Computing Surveys.</div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">NF-Align: Neighborhood Filtering for Entity Alignment in Large-Scale Communication Networks</div>
-                <div class="pub-authors"><strong>Yi Li</strong>, et al.</div>
-                <div class="pub-venue">2023 IEEE/CIC International Conference on Communications in China (WCSP), 2023. DOI: 10.1109/WCSP58612.2023.10405271</div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">PageRank Algorithm with Multi-Particle Environment Based on PettingZoo</div>
-                <div class="pub-authors"><strong>Yi Li</strong>, et al.</div>
-                <div class="pub-venue">Proceedings of the 2023 International Conference, 2023. DOI: https://doi.org/10.54097/zsfnjk16</div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-title">Game Theory Methods for Pursuit-Evasion Problems</div>
-                <div class="pub-authors"><strong>Yi Li</strong>, Mingxin Liu, Peiyu Luan, and Junchi Zhou</div>
-                <div class="pub-venue">Journal of Physics: Conference Series, vol. 2402, 012024, 2022. DOI: 10.1088/1742-6596/2402/1/012024</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Internship</h2>
-
-            <div class="exp-item">
-                <div class="exp-title">Recommendation Algorithm Intern</div>
-                <div class="meta">China Telecom, Nanjing, Jiangsu Province, China | Jun 2024 – Dec 2024</div>
-                <ul>
-                    <li>Built collaborative filtering-based recommendation models from user behaviour data for a customer service platform.</li>
-                    <li>Designed LLM-powered recommendation services for contextual understanding of chat records, improving response relevance and satisfaction.</li>
-                    <li>Analysed large-scale interaction logs to identify behavioural patterns and optimise recommendation accuracy.</li>
-                    <li>Worked with cross-functional teams to integrate the recommendation engine into existing service infrastructure.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Projects</h2>
-
-            <div class="exp-item">
-                <div class="exp-title">Movie Review Sentiment Analysis System</div>
-                <div class="meta">GitHub: momoyi0929/Sentiment-Analysis-of-Movie-Reviews.git</div>
-                <ul>
-                    <li>Implemented a binary sentiment classification system for movie reviews using a Naive Bayes classifier.</li>
-                    <li>Applied TF-IDF feature extraction to strengthen feature representation and improve model performance.</li>
-                    <li>Optimised the model pipeline, increasing accuracy and macro-averaged F1 score on sentiment tasks.</li>
-                </ul>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-title">Image Feature Analysis and Stitching System</div>
-                <div class="meta">GitHub: momoyi0929/Salient-Feature-Matching-and-Image-Stitch.git</div>
-                <ul>
-                    <li>Compared Harris corner detection, SIFT, and ORB feature detection methods.</li>
-                    <li>Implemented an image stitching algorithm based on SIFT- and ORB-based feature matching.</li>
-                    <li>Designed and developed a graphical user interface integrating all system functionalities.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-label">Programming</div>
-                <div>Python, Java, JavaScript, Ruby, HTML/CSS, MySQL</div>
-
-                <div class="skill-label">AI / ML</div>
-                <div>TensorFlow, PyTorch, scikit-learn, PettingZoo</div>
-
-                <div class="skill-label">Research Areas</div>
-                <div>LLM Agent Memory Security, Information Hiding, Adversarial Defence, Recommendation Systems, Machine Learning, Network Analysis, NLP, Computer Vision</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Certifications</h2>
-            <p>PADI Junior Open Water Diver — Level 1</p>
-        </section>
-
-        <footer>
-            © 2026 Yi Li. Last updated: April 2026.
-        </footer>
-
+    <!-- Language -->
+    <div class="lang-switch">
+        <span class="active">Eng</span> / <a href="zh.html">中文</a>
     </div>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="header-text">
+            <h1>Yi Li</h1>
+
+            <div class="subtitle">
+                MSc Cyber Security Student
+            </div>
+
+            <div class="affiliation">
+                <img class="logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/University_of_Bristol_logo.svg/512px-University_of_Bristol_logo.svg.png">
+                University of Bristol · Department of Computer Science
+            </div>
+
+            <div class="links">
+                <a href="mailto:sheffieldliyi@gmail.com">
+                    <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg">
+                    Email
+                </a>
+
+                <a href="https://github.com/momoyi0929">
+                    <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+                    GitHub
+                </a>
+
+                <a href="https://scholar.google.com/citations?user=71bfvQcAAAAJ&hl=zh-CN">
+                    <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" style="filter: invert(45%) sepia(98%) saturate(1744%) hue-rotate(203deg);">
+                    Google Scholar
+                </a>
+
+                <span class="location-link">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+                    Bristol
+                </span>
+            </div>
+        </div>
+
+        <img class="avatar" src="photo.jpg">
+    </header>
+
+    <!-- About -->
+    <section>
+        <h2>About Me</h2>
+        <p>
+            I am an MSc Cyber Security student at the University of Bristol.
+            My research focuses on LLM agent long-term memory security,
+            including memory poisoning, retrieval manipulation, and cross-turn propagation.
+        </p>
+
+        <div>
+            <span class="tag">LLM Agent Security</span>
+            <span class="tag">Long-Term Memory</span>
+            <span class="tag">Memory Poisoning</span>
+            <span class="tag">Adversarial Defence</span>
+            <span class="tag">Knowledge Graph</span>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section>
+        <h2>News</h2>
+
+        <div class="news-item">
+            <span class="date">2025</span>
+            Started MSc Cyber Security at University of Bristol
+        </div>
+
+        <div class="news-item">
+            <span class="date">2024</span>
+            Internship at China Telecom
+        </div>
+
+        <div class="news-item">
+            <span class="date">2024</span>
+            Started LLM memory security research
+        </div>
+    </section>
+
+</div>
+
 </body>
 </html>
