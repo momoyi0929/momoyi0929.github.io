@@ -65,18 +65,38 @@
         }
 
         .links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            margin-top: 18px;
             font-size: 15px;
-            color: #444;
+            flex-wrap: wrap;
         }
 
-        .links span {
-            margin-right: 14px;
+        .links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #1f4e79;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .icon {
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            vertical-align: middle;
         }
 
         .avatar {
-            width: 180px;
-            height: 220px;
-            border-radius: 6px;
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
             object-fit: cover;
             border: 1px solid #ddd;
         }
@@ -184,7 +204,7 @@
 
             .avatar {
                 width: 150px;
-                height: 185px;
+                height: 150px;
             }
 
             h1 {
@@ -208,7 +228,7 @@
 
             .avatar {
                 width: 120px;
-                height: 150px;
+                height: 120px;
             }
 
             h1 {
@@ -230,11 +250,27 @@
                 <h1>Yi Li</h1>
                 <div class="subtitle">MSc Cyber Security Student @ University of Bristol</div>
                 <div class="affiliation">Research interests: LLM Agent Security, Long-Term Memory, Model Poisoning, Prompt Leakage</div>
+
                 <div class="links">
-                    <span>Email: <a href="mailto:sheffieldliyi@gmail.com">sheffieldliyi@gmail.com</a></span>
-                    <span>GitHub: <a href="https://github.com/momoyi0929">momoyi0929</a></span>
-                    <span>Google Scholar: <a href="#">Google Scholar</a></span>
-                    <span>Location: Bristol, United Kingdom</span>
+                    <a href="mailto:sheffieldliyi@gmail.com">
+                        <img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Email icon">
+                        Email
+                    </a>
+                
+                    <a href="https://github.com/momoyi0929" target="_blank">
+                        <img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub icon">
+                        GitHub
+                    </a>
+                
+                    <a href="https://scholar.google.com/citations?user=71bfvQcAAAAJ&hl=zh-CN" target="_blank">
+                        <img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlescholar.svg" alt="Google Scholar icon">
+                        Google Scholar
+                    </a>
+                
+                    <span style="display: inline-flex; align-items: center; gap: 8px; color:#333;">
+                        <img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlemaps.svg" alt="Location icon">
+                        Bristol
+                    </span>
                 </div>
             </div>
 
@@ -259,8 +295,7 @@
                 <span class="tag">Long-Term Memory</span>
                 <span class="tag">Memory Poisoning</span>
                 <span class="tag">Adversarial Defence</span>
-                <span class="tag">Recommendation Systems</span>
-                <span class="tag">Machine Learning</span>
+                <span class="tag">Knowledge Graph</span>
             </div>
         </section>
 
