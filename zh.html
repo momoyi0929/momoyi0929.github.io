@@ -58,6 +58,12 @@
             flex: 1;
         }
 
+        .school-logo {
+            width: 185px;
+            margin-bottom: 18px;
+            display: block;
+        }
+
         h1 {
             font-size: 38px;
             font-weight: 700;
@@ -277,7 +283,7 @@
             align-items: flex-start;
             gap: 20px;
         }
-
+        
         .edu-school {
             display: flex;
             align-items: center;
@@ -285,24 +291,24 @@
             margin-top: 6px;
             color: #444;
         }
-
+        
         .edu-logo {
             width: 24px;
             height: 24px;
             object-fit: contain;
         }
-
+        
         .edu-date {
             color: #777;
             font-weight: 500;
             white-space: nowrap;
         }
-
+        
         .edu-item {
             padding: 18px 0;
             border-bottom: 1px solid #eee;
         }
-
+        
         .edu-item:last-child {
             border-bottom: none;
         }
@@ -323,6 +329,10 @@
             .avatar {
                 width: 150px;
                 height: 150px;
+            }
+
+            .school-logo {
+                width: 160px;
             }
 
             h1 {
@@ -347,6 +357,10 @@
             .avatar {
                 width: 120px;
                 height: 120px;
+            }
+
+            .school-logo {
+                width: 140px;
             }
 
             h1 {
@@ -374,7 +388,7 @@
         <header class="header">
             <div class="header-text">
                 <h1>李乙</h1>
-                <div class="subtitle">布里斯托大学网络安全硕士研究生｜LLM Agent 长期记忆安全研究</div>
+                <div class="subtitle">布里斯托大学网络安全硕士研究生</div>
                 <div class="affiliation">计算机科学系</div>
 
                 <div class="links">
@@ -383,20 +397,20 @@
                         邮箱
                     </a>
 
-                    <a href="https://github.com/momoyi0929" target="_blank" rel="noopener noreferrer">
-                        <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-                        GitHub
-                    </a>
-
-                    <a href="https://scholar.google.com/citations?user=71bfvQcAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">
-                        <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar" style="filter: invert(45%) sepia(98%) saturate(1744%) hue-rotate(203deg) brightness(96%) contrast(95%);">
-                        Google Scholar
-                    </a>
-
                     <button class="wechat-button" onclick="openWechatModal()">
                         <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wechat.svg" alt="WeChat" style="filter: invert(45%) sepia(25%) saturate(782%) hue-rotate(83deg) brightness(92%) contrast(87%);">
                         微信
                     </button>
+
+                    <a href="https://github.com/momoyi0929" target="_blank">
+                        <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                        GitHub
+                    </a>
+
+                    <a href="https://scholar.google.com/citations?user=71bfvQcAAAAJ&hl=zh-CN" target="_blank">
+                        <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar" style="filter: invert(45%) sepia(98%) saturate(1744%) hue-rotate(203deg) brightness(96%) contrast(95%);">
+                        Google Scholar
+                    </a>
 
                     <span class="location-link">
                         <img class="icon" src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location">
@@ -405,30 +419,31 @@
                 </div>
             </div>
 
-            <img class="avatar" src="photo.jpg" alt="Yi Li photo">
+            <img class="avatar" src="电子照.jpg" alt="Yi Li photo">
         </header>
 
         <section>
             <h2>个人简介</h2>
             <p>
                 我目前是布里斯托大学网络安全专业硕士研究生，本科毕业于谢菲尔德大学计算机科学专业。
-                我的研究方向聚焦于 LLM-based agent 系统中的长期记忆安全，尤其关注持久化记忆如何在多轮交互中被写入、检索、复用，并进一步影响智能体的推理、决策与长期行为。
+                我当前的研究聚焦于 LLM-based agent 系统中的长期记忆，尤其关注记忆如何在多轮交互中被存储、检索和使用，以及它如何随着时间推移影响智能体的推理与决策。
             </p>
             <p>
-                我特别关注记忆投毒、记忆抽取、检索操控、跨轮传播以及长期记忆中的敏感信息保护问题。
-                目前的研究工作围绕 memory lifecycle defence 展开，尝试从记忆写入、可信检索、场景约束、推理时记忆物化以及持久化治理等环节构建系统性的防御框架。
+                我尤其关注将记忆理解为一种结构化且不断演化的知识组件，其中记忆、检索和推理之间的交互会影响 LLM-based agent 的整体行为。
+                我的研究探索记忆生命周期机制及其对智能体系统可靠性和性能的影响。
             </p>
+
             <p>
-                此外，我具有实体对齐、推荐系统、情感分析、计算机视觉以及大语言模型智能服务方面的研究与工程经验。
-                在中国电信实习期间，我参与了面向客服场景的协同过滤推荐模型与基于大语言模型的推荐服务设计。
+                我具有实体对齐、推荐系统、情感分析、计算机视觉以及基于大语言模型的智能服务方面的研究与工程经验。
+                在中国电信实习期间，我参与了面向客服场景的协同过滤推荐模型和基于大语言模型的推荐服务开发。
             </p>
 
             <div class="keywords">
                 <span class="tag">LLM Agent Security</span>
                 <span class="tag">Long-Term Memory</span>
-                <span class="tag">Memory Poisoning</span>
-                <span class="tag">Retrieval / RAG Security</span>
-                <span class="tag">Graph-based Defence</span>
+                <span class="tag">Retrieval / RAG</span>
+                <span class="tag">Multi-step Reasoning</span>
+                <span class="tag">Graph Modeling</span>
             </div>
         </section>
 
@@ -454,7 +469,7 @@
 
         <section>
             <h2>教育经历</h2>
-
+        
             <div class="edu-item">
                 <div class="edu-header">
                     <div>
@@ -464,14 +479,13 @@
                             <span>布里斯托大学</span>
                         </div>
                         <ul>
-                            <li>预计 2026 年 8 月完成学位。</li>
-                            <li>研究兴趣：LLM Agent 安全、长期记忆安全、检索增强系统安全与对抗防御。</li>
+                            <li>预计获得 First-Class Honours / Distinction。</li>
                         </ul>
                     </div>
                     <div class="edu-date">2025.09 – 2026.08</div>
                 </div>
             </div>
-
+        
             <div class="edu-item">
                 <div class="edu-header">
                     <div>
@@ -496,13 +510,12 @@
 
             <div class="exp-item">
                 <div class="exp-title">LLM Agent 长期记忆安全</div>
-                <div class="meta">进行中研究项目</div>
+                <div class="meta">进行中研究项目 - 准备投稿 UESNIX SECURITY 2027</div>
                 <ul>
-                    <li>研究 LLM-based agent 长期记忆系统中的安全风险，包括记忆投毒、记忆抽取、检索操控、跨轮传播与恶意记忆长期持久化。</li>
-                    <li>提出基于记忆生命周期的防御框架，覆盖 Secure Admission、Trusted Retrieval、Scenario-Aware Constraints 与 Persistent Memory Governance 等模块。</li>
-                    <li>设计面向 MEXTRA、MINJA 和 AgentPoison 等代表性智能体记忆安全基准的实验，用于评估恶意记忆对长期行为、推理结果与工具调用的影响。</li>
-                    <li>开发模块化防御组件，包括记忆写入验证、可信检索评分、场景约束、语义一致性检查与反馈回写治理。</li>
-                    <li>探索 graph-based memory defence，将记忆、查询、来源、动作、风险标签与干预决策建模为安全导向的 Memory Defense Graph。</li>
+                    <li>研究 LLM-based agent 长期记忆系统中的安全风险，包括记忆投毒、检索操控和跨轮传播。</li>
+                    <li>提出基于生命周期的防御框架，覆盖记忆写入、检索、验证、推理和反馈循环。</li>
+                    <li>基于 MEXTRA 和 AgentPoison 等智能体基准设计实验，用于评估恶意记忆对长期行为的影响。</li>
+                    <li>开发模块化防御组件，用于记忆验证、一致性检查和更安全的记忆检索。</li>
                 </ul>
             </div>
 
@@ -510,10 +523,10 @@
                 <div class="exp-title">神经网络记忆机制探索</div>
                 <div class="meta">2024</div>
                 <ul>
-                    <li>研究 RNN 中的记忆机制，重点分析梯度变化与吸引子对长期记忆建模的影响。</li>
-                    <li>设计短期复现、长期关联与吸引子模拟任务，用于观察序列模型中的记忆保持能力。</li>
+                    <li>研究 RNN 中的记忆机制，重点关注梯度和吸引子对长期记忆的影响。</li>
+                    <li>设计短期复现、长期关联和吸引子模拟任务。</li>
                     <li>提出 Euler Sine Analysis 方法，用于可视化 seq2seq 模型中的吸引子动态。</li>
-                    <li>分析吸引盆与 loss-gradient 模式，以解释长依赖建模中的困难。</li>
+                    <li>分析吸引盆和 loss-gradient 模式，以解释长依赖建模中的困难。</li>
                 </ul>
             </div>
         </section>
@@ -524,40 +537,25 @@
             <div class="pub-item">
                 <div class="pub-title">A Survey of Trustworthy LLMs for Cybersecurity: An Auditable Closed-Loop Framework</div>
                 <div class="pub-authors"><strong>Yi Li</strong>, et al.</div>
-                <div class="pub-venue">Manuscript in preparation, targeting ACM Computing Surveys.</div>
+                <div class="pub-venue">手稿准备中，ACM Computing Surveys 审稿中。</div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-title">NF-Align: Neighborhood Filtering for Entity Alignment in Large-Scale Communication Networks</div>
                 <div class="pub-authors"><strong>Yi Li</strong>, et al.</div>
-                <div class="pub-venue">
-                    2023. DOI:
-                    <a href="https://doi.org/10.1109/WCSP58612.2023.10405271" target="_blank" rel="noopener noreferrer">
-                        10.1109/WCSP58612.2023.10405271
-                    </a>
-                </div>
+                <div class="pub-venue">会议：2023 International Conference on Wireless Communications and Signal Processing (WCSP), 2023. DOI: 10.1109/WCSP58612.2023.10405271</div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-title">PageRank Algorithm with Multi-Particle Environment Based on PettingZoo</div>
                 <div class="pub-authors"><strong>Yi Li</strong>, et al.</div>
-                <div class="pub-venue">
-                    Proceedings of the 2023 International Conference, 2023. DOI:
-                    <a href="https://doi.org/10.54097/zsfnjk16" target="_blank" rel="noopener noreferrer">
-                        10.54097/zsfnjk16
-                    </a>
-                </div>
+                <div class="pub-venue">5th International Conference on Computer Science and Intelligent Communication (CSIC 2023), 2023. DOI: https://doi.org/10.54097/zsfnjk16</div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-title">Game Theory Methods for Pursuit-Evasion Problems</div>
-                <div class="pub-authors"><strong>Yi Li</strong>, Mingxin Liu, Peiyu Luan, and Junchi Zhou</div>
-                <div class="pub-venue">
-                    Journal of Physics: Conference Series, vol. 2402, 012024, 2022. DOI:
-                    <a href="https://doi.org/10.1088/1742-6596/2402/1/012024" target="_blank" rel="noopener noreferrer">
-                        10.1088/1742-6596/2402/1/012024
-                    </a>
-                </div>
+                <div class="pub-authors"><strong>Yi Li</strong>, et al.</div>
+                <div class="pub-venue">Journal of Physics: Conference Series, vol. 2402, 012024, 2022. DOI: 10.1088/1742-6596/2402/1/012024</div>
             </div>
         </section>
 
@@ -566,12 +564,12 @@
 
             <div class="exp-item">
                 <div class="exp-title">推荐算法实习生</div>
-                <div class="meta">中国电信，江苏南京｜2024.06 – 2024.12</div>
+                <div class="meta">中国电信，中国江苏省南京市 | 2024.06 – 2024.12</div>
                 <ul>
-                    <li>基于用户行为数据构建客服平台中的协同过滤推荐模型。</li>
-                    <li>设计基于大语言模型的推荐服务，用于理解聊天记录上下文并提升推荐相关性。</li>
-                    <li>分析大规模交互日志，挖掘用户行为模式并优化推荐准确率。</li>
-                    <li>与跨职能团队协作，将推荐引擎集成至已有服务系统。</li>
+                    <li>基于用户行为数据，为客服平台构建协同过滤推荐模型。</li>
+                    <li>设计基于大语言模型的推荐服务，用于理解聊天记录上下文，并提升推荐相关性和用户满意度。</li>
+                    <li>分析大规模交互日志，识别用户行为模式并优化推荐准确率。</li>
+                    <li>与跨职能团队协作，将推荐引擎集成到已有服务基础设施中。</li>
                 </ul>
             </div>
         </section>
@@ -584,8 +582,8 @@
                 <div class="meta">GitHub: momoyi0929/Sentiment-Analysis-of-Movie-Reviews.git</div>
                 <ul>
                     <li>使用朴素贝叶斯分类器实现电影评论二分类情感分析系统。</li>
-                    <li>采用 TF-IDF 特征提取方法增强文本特征表示。</li>
-                    <li>优化模型流程，提高情感分类任务中的准确率与宏平均 F1 分数。</li>
+                    <li>应用 TF-IDF 特征提取方法，以增强特征表示并提升模型性能。</li>
+                    <li>优化模型流程，提高情感分类任务中的准确率和宏平均 F1 分数。</li>
                 </ul>
             </div>
 
@@ -593,9 +591,9 @@
                 <div class="exp-title">图像特征分析与拼接系统</div>
                 <div class="meta">GitHub: momoyi0929/Salient-Feature-Matching-and-Image-Stitch.git</div>
                 <ul>
-                    <li>比较 Harris 角点检测、SIFT 与 ORB 特征检测方法。</li>
-                    <li>实现基于 SIFT 与 ORB 特征匹配的图像拼接算法。</li>
-                    <li>设计并开发集成系统功能的图形用户界面。</li>
+                    <li>比较 Harris 角点检测、SIFT 和 ORB 特征检测方法。</li>
+                    <li>实现基于 SIFT 和 ORB 特征匹配的图像拼接算法。</li>
+                    <li>设计并开发集成全部系统功能的图形用户界面。</li>
                 </ul>
             </div>
         </section>
@@ -607,10 +605,10 @@
                 <div>Python, Java, JavaScript, Ruby, HTML/CSS, MySQL</div>
 
                 <div class="skill-label">AI / ML</div>
-                <div>PyTorch, TensorFlow, scikit-learn, PettingZoo, NLP, Computer Vision</div>
+                <div>TensorFlow, PyTorch, scikit-learn, PettingZoo</div>
 
                 <div class="skill-label">研究方向</div>
-                <div>LLM Agent Memory Security, Long-Term Memory, Retrieval / RAG Security, Memory Poisoning, Adversarial Defence, Graph-based Defence, Recommendation Systems</div>
+                <div>LLM Agent Memory Security, Information Hiding, Adversarial Defence, Recommendation Systems, Machine Learning, Network Analysis, NLP, Computer Vision</div>
             </div>
         </section>
 
